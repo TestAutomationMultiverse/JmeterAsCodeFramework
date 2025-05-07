@@ -9,4 +9,4 @@ A robust Java-based performance testing framework built on top of JMeter DSL, pr
 - **Dynamic variable resolution**: Variables can be defined at global, scenario, and request levels
 - **Comprehensive reporting**: HTML reports with charts and detailed statistics
 
-For more details, see the [Documentation](https://jmeterascode.github.io) and usage examples.
+For more details, see the [Documentation](https://testautomationmultiverse.github.io/JmeterAsCodeFramework/) and usage examples.
