@@ -1,0 +1,58 @@
+execution:
+  threads: 2
+  iterations: 5
+  successThreshold: 95.0
+  variables:
+    baseUrl: "https://countries.trevorblades.com"
+
+variables:
+  testId: "gql-test-001"
+  country: "US"
+  continent: "NA"
+
+scenarios:
+  - name: "GraphQL Countries API Test"
+    variables:
+      scenario: "countries-api"
+    graphQLRequests:
+      - name: "Get Country by Code"
+        endpoint: "${baseUrl}"
+        queryFile: "templates/graphql/get_country.graphql"
+        graphQLVariables:
+          code: "${country}"
+        statusCode: 200
+        responseTimeThreshold: 2000
+      
+      # - name: "Get Continents"
+      #   endpoint: "${baseUrl}"
+      #   query: |
+      #     query {
+      #       continents {
+      #         code
+      #         name
+      #       }
+      #     }
+      #   statusCode: 200
+      #   responseTimeThreshold: 2000
+
+      # - name: "Get Countries by Continent"
+      #   endpoint: "${baseUrl}"
+      #   query: |
+      #     query GetCountriesByContinent($code: ID!) {
+      #       continent(code: $code) {
+      #         name
+      #         countries {
+      #           code
+      #           name
+      #           capital
+      #           currency
+      #           languages {
+      #             name
+      #           }
+      #         }
+      #       }
+      #     }
+      #   graphQLVariables:
+      #     code: "${continent}"
+      #   statusCode: 200
+      #   responseTimeThreshold: 3000

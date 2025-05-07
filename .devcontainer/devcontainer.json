@@ -1,0 +1,58 @@
+{
+    "name": "Performance Testing Framework",
+    "dockerFile": "Dockerfile",
+    "features": {
+        "ghcr.io/devcontainers/features/java:1": {
+            "version": "21",
+            "installMaven": "true",
+            "mavenVersion": "3.9.5"
+        },
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "20",
+            "nodeGypDependencies": true
+        },
+        "ghcr.io/devcontainers/features/git:1": {
+            "version": "latest"
+        },
+        "ghcr.io/devcontainers-extra/features/mkdocs:2": {}
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "vscjava.vscode-java-pack",
+                "redhat.vscode-xml",
+                "vscjava.vscode-maven",
+                "ms-azuretools.vscode-docker",
+                "github.vscode-github-actions",
+                "eamodio.gitlens",
+                "HongYan.maven-cleaner",
+                "shengchen.vscode-checkstyle",
+                "vscjava.vscode-gradle",
+                "DavidAnson.vscode-markdownlint",
+                "christian-kohler.path-intellisense",
+                "github.vscode-pull-request-github",
+                "ms-vscode.vscode-typescript-tslint-plugin",
+                "dhruv.maven-dependency-explorer",
+                "mechatroner.rainbow-csv",
+                "bierner.markdown-mermaid",
+                "narze.graphql-extension-pack"
+            ],
+            "settings": {
+                "java.configuration.updateBuildConfiguration": "automatic",
+                "java.compile.nullAnalysis.mode": "automatic",
+                "editor.formatOnSave": true,
+                "files.autoSave": "afterDelay",
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "editor.codeActionsOnSave": {
+                    "source.organizeImports": "always",
+                    "source.fixAll": "always"
+                }
+            }
+        }
+    },
+    "remoteUser": "vscode",
+    "hostRequirements": {
+        "memory": "8gb",
+        "cpus": 4
+    }
+}

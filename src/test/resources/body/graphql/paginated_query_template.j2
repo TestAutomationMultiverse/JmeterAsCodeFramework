@@ -1,0 +1,13 @@
+{
+  "query": "query GetData($limit: Int!, $page: Int!) { 
+    data(limit: $limit, page: $page) { 
+      id 
+      name 
+      description 
+    } 
+  }",
+  "variables": {
+    "limit": {{ limit }},
+    "page": {{ page }}
+  }
+}

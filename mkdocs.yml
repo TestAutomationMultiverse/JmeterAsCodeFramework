@@ -1,0 +1,60 @@
+site_name: Jmeter As Code Framework
+site_description: A robust Java-based performance testing framework for JMeter DSL
+site_author: mahmoud eltohamy
+repo_url: https://github.com/TestAutomationMultiverse/JmeterAsCodeFramework
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: indigo
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+plugins:
+  - search
+  - mkdocstrings
+
+nav:
+  - Home: index.md
+  - Guides:
+      - Getting Started: guides/getting-started.md
+      - Framework Components: guides/components.md
+      - Protocol Support: guides/protocols.md
+      - Architecture: guides/architecture.md
+      - Configuration: guides/configuration.md
+      - Test Design: guides/test-design.md
+      - DevContainer Setup: guides/devcontainer-setup.md
+  - Technical Documentation:
+      - Examples:
+          - Basic Example: examples/basic-example.md
+          - Multiple Scenarios: examples/multiple-scenarios.md
+          - Variable Usage: examples/variable-usage.md
+      - Reports:
+          - HTML Reports: reporting/html-reports.md
+  - Test API Examples:
+      - JSONPlaceholder: api-examples/jsonplaceholder.md
+      - SOAP Service Beeceptor: api-examples/soap-service-beeceptor.md
+      - Apollo GraphQL Countries: api-examples/apollo-countries-graphql.md

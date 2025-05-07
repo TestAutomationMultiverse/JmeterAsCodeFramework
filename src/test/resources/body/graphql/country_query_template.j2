@@ -1,0 +1,7 @@
+{
+  "query": "query GetCountryInfo($code: ID!) { country(code: $code) { name capital currency code languages { name native } } }",
+  "variables": {
+    "code": "{{ code }}"
+  },
+  "operationName": "GetCountryInfo"
+}

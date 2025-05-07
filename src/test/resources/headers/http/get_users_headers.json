@@ -1,0 +1,4 @@
+{
+  "Accept": "application/json",
+  "X-API-Version": "${apiVersion}"
+}

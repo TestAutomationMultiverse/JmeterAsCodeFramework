@@ -1,0 +1,7 @@
+{
+  "Content-Type": "application/json",
+  "Accept": "application/json",
+  "User-Agent": "JMeter-Java-DSL-Test/${version}",
+  "Cache-Control": "no-cache",
+  "Connection": "keep-alive"
+}

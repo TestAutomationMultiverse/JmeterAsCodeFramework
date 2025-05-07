@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="InventoryResponse">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ProductId" type="xs:string"/>
+              <xs:element name="StockLevel" type="xs:integer"/>
+              <xs:element name="Available" type="xs:boolean"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

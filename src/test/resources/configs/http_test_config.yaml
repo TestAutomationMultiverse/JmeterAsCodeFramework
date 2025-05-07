@@ -1,0 +1,42 @@
+execution:
+  threads: 2
+  iterations: 5
+  successThreshold: 95.0
+  variables:
+    baseUrl: "https://jsonplaceholder.typicode.com"
+
+variables:
+  testId: "http-test-001"
+  userId: "1"
+  postId: "1"
+
+scenarios:
+  - name: "HTTP API Test"
+    variables:
+      scenario: "jsonplaceholder-api"
+    requests:
+      - name: "Get User"
+        endpoint: "${baseUrl}/users/${userId}"
+        method: "GET"
+        statusCode: 200
+        responseTimeThreshold: 2000
+        responses:
+          JsonPath: "$.name=Leanne Graham"
+      
+      - name: "Get Posts"
+        endpoint: "${baseUrl}/users/${userId}/posts"
+        method: "GET"
+        statusCode: 200
+        responseTimeThreshold: 2000
+        
+      # - name: "Create Post"
+      #   endpoint: "${baseUrl}/posts"
+      #   method: "POST"
+      #   body: |
+      #     {
+      #       "userId": ${userId},
+      #       "title": "Test Post",
+      #       "body": "This is a test post created by the Performance Automation Framework"
+      #     }
+      #   statusCode: 201
+      #   responseTimeThreshold: 2000

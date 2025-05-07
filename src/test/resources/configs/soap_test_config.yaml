@@ -1,0 +1,30 @@
+execution:
+  threads: 2
+  iterations: 7
+  successThreshold: 95.0
+  variables:
+    baseUrl: "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso"
+
+variables:
+  testId: "soap-test-001"
+  city: "New York"
+  country: "US"
+
+scenarios:
+  - name: "SOAP API Test"
+    variables:
+      scenario: "country-info-api"
+    soapRequests:
+      - name: "Get Country Info"
+        endpoint: "${baseUrl}"
+        soapAction: "http://www.oorsprong.org/websamples.countryinfo/CountryName"
+        templateFile: "templates/soap/weather_request.xml"
+        headers: "headers/soap/soap_headers.json"
+        templateVariables:
+          city: "${city}"
+          country: "${country}"
+        statusCode: 200
+        responseTimeThreshold: 2000
+        xpath:
+          - expression: "//*[local-name()='CountryNameResult']"
+            expected: "United States"

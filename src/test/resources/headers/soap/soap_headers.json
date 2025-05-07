@@ -1,0 +1,5 @@
+{
+  "Content-Type": "text/xml;charset=UTF-8",
+  "Accept": "text/xml",
+  "SOAPAction": "http://www.oorsprong.org/websamples.countryinfo/CountryName"
+}

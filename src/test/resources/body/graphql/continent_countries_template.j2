@@ -1,0 +1,7 @@
+{
+  "query": "query GetContinentCountries($code: ID!) { continent(code: $code) { name countries { name capital currency code } } }",
+  "variables": {
+    "code": "{{ code }}"
+  },
+  "operationName": "GetContinentCountries"
+}

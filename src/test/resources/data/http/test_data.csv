@@ -1,0 +1,4 @@
+id,username,email,operation,status
+1,testuser1,user1@example.com,post,active
+2,testuser2,user2@example.com,get,active
+3,testuser3,user3@example.com,put,inactive
